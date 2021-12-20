@@ -8,12 +8,25 @@
 
     <base href="/" />
 
-    <link rel="stylesheet" href="/assets/tailwind.build.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/assets/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="RyanTT.styles.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body>
-    <div id="app">Loading...</div>
+<body class="bg-slate-900 text-slate-400 selection:bg-yellow-200 selection:text-slate-900">
+    <!-- I wasn't sure why this is necessary yet, but it negates the browser from mindlessly focusing the first text element it sees and adding an ugly border. -->
+    <h1></h1>
+
+    <div id="app" class="h-screen grid place-items-center">
+        <div class="flex flex-col items-center">
+            <div class="bg-green-700 h-5 w-5 rounded-full animate-ping"></div>
+
+            <div class="mt-10 text-mono tracking-widest">Loading site..</div>
+        </div>
+    </div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
