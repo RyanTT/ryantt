@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i wwwroot/assets/tailwind/tailwind.css -o wwwroot/assets/tailwind/tailwind.build.css --watch",
-    "build": "npx tailwindcss -i wwwroot/assets/tailwind/tailwind.css -o wwwroot/assets/tailwind/tailwind.build.css --minify"
+    "dev": "npx tailwindcss -i wwwroot/assets/tailwind/tailwind.css -o wwwroot/assets/tailwind/tailwind.min.css --watch",
+    "build": "npx tailwindcss -i wwwroot/assets/tailwind/tailwind.css -o wwwroot/assets/tailwind/tailwind.min.css --minify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "tailwindcss": "^3.0.7"
   }
 }
