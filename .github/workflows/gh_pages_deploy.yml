@@ -17,7 +17,7 @@ jobs:
         dotnet-version: 6.x.x
 
     - name: Publish .NET Core Project
-      run: dotnet publish RyanTT.csproj -o release
+      run: dotnet publish RyanTT/RyanTT.csproj -o ./release
 
     - name: Commit output directory to GitHub Pages branch "gh-pages"
       uses: JamesIves/github-pages-deploy-action@3.7.1
