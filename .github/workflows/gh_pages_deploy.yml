@@ -16,8 +16,12 @@ jobs:
       with:
         dotnet-version: 6.x.x
 
-    - name: Publish .NET Core Project
+    - name: Publish .NET Project
       run: dotnet publish RyanTT/RyanTT.csproj -o ./release
+
+    # We should add a .nojekyll file to disable this GitHub pages feature. It will break any paths that include an underscore, so it will break the page.
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
 
     - name: Commit output directory to GitHub Pages branch "gh-pages"
       uses: JamesIves/github-pages-deploy-action@3.7.1
