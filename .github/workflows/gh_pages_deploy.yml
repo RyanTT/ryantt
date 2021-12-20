@@ -14,7 +14,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 6.0
+        dotnet-version: 6.x.x
 
     - name: Publish .NET Core Project
       run: dotnet publish RyanTT.csproj -o release
