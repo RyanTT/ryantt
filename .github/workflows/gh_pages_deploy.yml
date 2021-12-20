@@ -16,6 +16,17 @@ jobs:
       with:
         dotnet-version: 6.x.x
 
+    - name: Setup node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Restore NPM packages and build
+      working-directory: ./BytexDigital.Blazor.Components.CookieConsent
+      run: |
+        npm install
+        npm run build
+
     - name: Publish .NET Project
       run: dotnet publish RyanTT/RyanTT.csproj -o ./release
 
