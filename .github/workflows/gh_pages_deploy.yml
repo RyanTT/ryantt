@@ -22,7 +22,7 @@ jobs:
         node-version: '14'
 
     - name: Restore NPM packages and build
-      working-directory: ./BytexDigital.Blazor.Components.CookieConsent
+      working-directory: ./RyanTT
       run: |
         npm install
         npm run build
